@@ -30,7 +30,12 @@ jobs:
       - attach_workspace:
           at: "/tmp/workspace/"
       - run:
-          name: Run tests
+          name: Setup
+          command: |
+            mkdir ~/.triplequote
+            printf "floating-key=%s\n" "$HYDRA_SERVER_KEY" > ~/.triplequote/hydra.license
+      - run:
+          name: Test
           command: sbt test
 
 workflows:
