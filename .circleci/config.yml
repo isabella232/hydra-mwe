@@ -41,3 +41,5 @@ workflows:
           context: org-global-cph
       - test:
           context: org-global-cph
+          requires:
+            - build
