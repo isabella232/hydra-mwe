@@ -49,11 +49,6 @@ jobs:
           command: |
             echo "credentials += Credentials(\"Artifactory Realm\", \"liveintent.jfrog.io\", \"${ARTIFACTORY_USERNAME}\", \"${ARTIFACTORY_PASSWORD}\")" >~/.sbt/1.0/sonatype.sbt
       - run:
-          name: Setup
-          command: |
-            mkdir ~/.triplequote
-            printf "floating-key=%s\n" "$HYDRA_SERVER_KEY" > ~/.triplequote/hydra.license
-      - run:
           name: Set up Hydra
           command: |
             mkdir ~/.triplequote
