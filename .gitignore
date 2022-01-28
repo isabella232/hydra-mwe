@@ -1,0 +1,6 @@
+/.bsp/
+target/
+
+.hydra/
+.metals/
+.vscode/
